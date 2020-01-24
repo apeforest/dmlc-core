@@ -199,6 +199,7 @@ class KVStore(KVStoreBase):
         Examples
         --------
         >>> # push a single key-value pair
+        >>> shape = (2,3)
         >>> kv.push('3', mx.nd.ones(shape)*8)
         >>> kv.pull('3', out=a) # pull out the value
         >>> print a.asnumpy()
@@ -285,6 +286,7 @@ class KVStore(KVStoreBase):
         Examples
         --------
         >>> # pull a single key-value pair
+        >>> shape = (2,3)
         >>> a = mx.nd.zeros(shape)
         >>> kv.pull('3', out=a)
         >>> print a.asnumpy()
@@ -357,6 +359,7 @@ class KVStore(KVStoreBase):
         Examples
         --------
         >>> # pushpull a single key-value pair
+        >>> shape = (2,3)
         >>> kv.pushpull('3', mx.nd.ones(shape)*8, out=a)
         >>> print a.asnumpy()
         [[ 8.  8.  8.]
